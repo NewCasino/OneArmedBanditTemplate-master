@@ -113,6 +113,7 @@ namespace OneArmedBandit
             }
         }
 
+        //Program restarts when score = 0
         private void resetButton_Click(object sender, EventArgs e)
         {
             Application.Restart();
