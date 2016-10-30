@@ -18,7 +18,7 @@ namespace OneArmedBandit
         Random randGen = new Random();
 
         // int value for score initialized to 10
-        int score = 100;
+        int score = 10;
 
         public Form1()
         {
@@ -86,19 +86,21 @@ namespace OneArmedBandit
 
             // Use compound if statement to check if all reels are equal.
             if (reel1Value == reel2Value && reel3Value == reel1Value && reel3Value == reel2Value)
-            {
+            {           
+                // If yes show "winner" statement and add 3 to score.
                 outputLabel.Text = "WINNER";
                 score += 3;
                 scoreDisplay.Text = score + "";
             } 
             else
-            {
+            {            
+                // If no show "play again" statement and subtract 1 from score.
                 outputLabel.Text = "PLAY AGAIN";
                 score--;
                 scoreDisplay.Text = score + "";
             }
-            // If yes show "winner" statement and add 3 to score.
-            // If no show "play again" statement and subtract 1 from score.         
+
+            // display updated score
 
 
             // if score has reached 0 display "lose" message and set button enabled property to false
@@ -107,10 +109,13 @@ namespace OneArmedBandit
                 outputLabel.Text = "LOSER";
                 spinButton.Enabled = false;
                 spinButton.BackColor = Color.Gray;
+                resetButton.Visible = true;
             }
+        }
 
-            // display updated score
-
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

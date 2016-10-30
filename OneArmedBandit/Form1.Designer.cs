@@ -36,6 +36,7 @@
             this.reel2 = new System.Windows.Forms.Label();
             this.reel1 = new System.Windows.Forms.Label();
             this.coinLabel = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // spinButton
@@ -72,14 +73,14 @@
             this.scoreDisplay.Name = "scoreDisplay";
             this.scoreDisplay.Size = new System.Drawing.Size(69, 38);
             this.scoreDisplay.TabIndex = 5;
-            this.scoreDisplay.Text = "100";
+            this.scoreDisplay.Text = "10";
             this.scoreDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // reel3
             // 
             this.reel3.BackColor = System.Drawing.Color.White;
             this.reel3.Image = global::OneArmedBandit.Properties.Resources.diamond_100x125;
-            this.reel3.Location = new System.Drawing.Point(307, 139);
+            this.reel3.Location = new System.Drawing.Point(299, 139);
             this.reel3.Name = "reel3";
             this.reel3.Size = new System.Drawing.Size(89, 75);
             this.reel3.TabIndex = 2;
@@ -97,7 +98,7 @@
             // 
             this.reel1.BackColor = System.Drawing.Color.White;
             this.reel1.Image = global::OneArmedBandit.Properties.Resources._7_100x125;
-            this.reel1.Location = new System.Drawing.Point(101, 139);
+            this.reel1.Location = new System.Drawing.Point(110, 139);
             this.reel1.Name = "reel1";
             this.reel1.Size = new System.Drawing.Size(88, 75);
             this.reel1.TabIndex = 0;
@@ -107,12 +108,27 @@
             this.coinLabel.BackColor = System.Drawing.Color.Transparent;
             this.coinLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coinLabel.ForeColor = System.Drawing.Color.White;
-            this.coinLabel.Location = new System.Drawing.Point(14, 290);
+            this.coinLabel.Location = new System.Drawing.Point(24, 290);
             this.coinLabel.Name = "coinLabel";
             this.coinLabel.Size = new System.Drawing.Size(75, 38);
             this.coinLabel.TabIndex = 6;
             this.coinLabel.Text = "Coins:";
             this.coinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // resetButton
+            // 
+            this.resetButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetButton.Font = new System.Drawing.Font("Rockwell", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Location = new System.Drawing.Point(2, 11);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(84, 45);
+            this.resetButton.TabIndex = 7;
+            this.resetButton.Text = "RESET";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Visible = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // Form1
             // 
@@ -121,6 +137,7 @@
             this.BackgroundImage = global::OneArmedBandit.Properties.Resources.slotBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(497, 330);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.coinLabel);
             this.Controls.Add(this.scoreDisplay);
             this.Controls.Add(this.outputLabel);
@@ -145,6 +162,7 @@
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label scoreDisplay;
         private System.Windows.Forms.Label coinLabel;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 
